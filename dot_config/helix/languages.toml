@@ -1,0 +1,28 @@
+[[language]]
+name = "rust"
+
+[language.config.check]
+command = "clippy"
+
+[[language]]
+name = "python"
+
+# PYRIGHT
+
+# roots = ["pyproject.toml"]
+# language-server = { command = "pyright-langserver", args = ["--stdio"] }
+# config = {}
+
+# RUFF
+
+scope = "source.python"
+language-server = { command = "ruff-lsp" }
+config = { settings = { args = [] } }
+
+formatter = { command = "black", args = ["-l", "100", "-S", "--quiet", "-"] }
+auto-format = true
+
+[[language]]
+name = "glsl"
+language-server = { command = "nc", args = ["localhost", "61313"] }
+file-types = ["glsl"]

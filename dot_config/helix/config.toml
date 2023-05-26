@@ -1,0 +1,14 @@
+theme = "night_owl"
+
+[editor]
+line-number = "relative"
+cursorcolumn = true
+cursorline = true
+color-modes = true
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.cursor-shape]
+insert = "bar"
+select = "hidden"
