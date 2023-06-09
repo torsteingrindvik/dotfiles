@@ -31,16 +31,16 @@ window:
   # least `2`, while using a value of `0` for columns and lines will fall back
   # to the window manager's recommended size
   dimensions:
-    columns: 240
-    lines: 60
+    columns: 150
+    lines: 50
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+   x: 20
+   y: 20
 
   # Window padding (changes require restart)
   #
@@ -62,7 +62,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: none
+  # decorations: none
 
   # Background opacity
   #
@@ -133,7 +133,8 @@ font:
     #   - (Windows) Consolas
     # family: "FiraCode Nerd Font Mono"
     # family: "Monocraft Nerd Font"
-    family: "ProggyVector"
+    # family: "ProggyVector"
+    family: "FantasqueSansM Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -202,12 +203,11 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night)
-#colors:
-  # Default colors
-  #primary:
-  #  background: '#1d1f21'
-  #  foreground: '#c5c8c6'
+colors:
+  primary:
+   # background: '#2f343f'
+   background: '#070427'
+   foreground: '#afb8c5'
 
     # Bright and dim foreground colors
     #
@@ -457,7 +457,12 @@ font:
 #   - (Linux/BSD/macOS) `$SHELL` or the user's login shell, if `$SHELL` is unset
 #   - (Windows) powershell
 shell:
-  program: ~/.cargo/bin/nu
+  program: /usr/bin/zellij
+  args:
+    - options
+    - --default-shell
+    - nu
+
 #  args:
 #    - --login
 

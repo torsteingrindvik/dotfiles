@@ -56,9 +56,22 @@ let-env NU_PLUGIN_DIRS = [
     ($nu.config-path | path dirname | path join 'plugins')
 ]
 
+# PATH
+let-env PATH = ($env.PATH | split row (char esep) | append '~/.local/bin')
+
+# Starship
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+
 # Defaults
-let-env EDITOR = 'hx'
+let-env EDITOR = 'helix'
 let-env CARGO_NET_GIT_FETCH_WITH_CLI = 'true'
+
+# Aliases
+source '~/.config/nushell/alias.nu'
+
+# Functions
+source '~/.config/nushell/functions.nu'
 
 # Secrets
 source '~/.config/nushell/secrets.nu'
